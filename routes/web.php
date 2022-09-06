@@ -2,6 +2,13 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('speaker/{speaker}', 'HomeController@view')->name('speaker');
+Route::get('/price1', 'HomeController@price')->name('price');
+Route::get('/price2', 'HomeController@price2')->name('price2');
+
+/*Route::get('/welcome', function () {
+    return view('welcome');
+});*/
+
 Route::redirect('/home', '/admin');
 Auth::routes(['register' => false]);
 
@@ -41,6 +48,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('hotels/destroy', 'HotelsController@massDestroy')->name('hotels.massDestroy');
     Route::post('hotels/media', 'HotelsController@storeMedia')->name('hotels.storeMedia');
     Route::resource('hotels', 'HotelsController');
+    // Services
+    Route::delete('services/destroy', 'ServicesController@massDestroy')->name('services.massDestroy');
+    Route::post('services/media', 'ServicesController@storeMedia')->name('services.storeMedia');
+    Route::resource('services', 'ServicesController');
 
     // Galleries
     Route::delete('galleries/destroy', 'GalleriesController@massDestroy')->name('galleries.massDestroy');
@@ -63,4 +74,11 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Prices
     Route::delete('prices/destroy', 'PricesController@massDestroy')->name('prices.massDestroy');
     Route::resource('prices', 'PricesController');
+    // Amenities2
+    Route::delete('amenities2/destroy', 'Amenities2Controller@massDestroy')->name('amenities2.massDestroy');
+    Route::resource('amenities2', 'Amenities2Controller');
+
+    // Prices2
+    Route::delete('prices2/destroy', 'Prices2Controller@massDestroy')->name('prices2.massDestroy');
+    Route::resource('prices2', 'Prices2Controller');
 });

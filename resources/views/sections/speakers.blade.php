@@ -10,9 +10,10 @@
         <div class="col-lg-4 col-md-6">
           <div class="speaker">
             <img src="{{ $speaker->photo->getUrl() }}" alt="{{ $speaker->name }}" class="img-fluid">
+           
             <div class="details">
               <h3><a href="{{ route('speaker', $speaker->id) }}">{{ $speaker->name }}</a></h3>
-              <p>{{ $speaker->description }}</p>
+              <p>{{ $speaker->description }} </p>
               <div class="social">
                 @if($speaker->twitter)
                   <a href="{{ $speaker->twitter }}"><i class="fa fa-twitter"></i></a>

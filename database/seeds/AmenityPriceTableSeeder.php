@@ -19,11 +19,11 @@ class AmenityPriceTableSeeder extends Seeder
             ],
             [
                 'id' => 2,
-                'amenities' => [1, 2, 3, 4]
+                'amenities' => [1, 2, 3]
             ],
             [
                 'id' => 3,
-                'amenities' => [1, 2, 3, 4, 5, 6]
+                'amenities' => [1, 2, 3]
             ],
         ];
 

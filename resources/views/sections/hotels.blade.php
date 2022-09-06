@@ -2,8 +2,8 @@
 
   <div class="container">
     <div class="section-header">
-      <h2>Hotels</h2>
-      <p>Here are some nearby hotels</p>
+      <h2>Our More Exciting Service</h2>
+      <p>Here some special dervice for you</p>
     </div>
 
     <div class="row">

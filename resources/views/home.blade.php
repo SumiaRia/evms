@@ -13,6 +13,7 @@
   @include('sections.venues')
 
   @include('sections.hotels')
+  @include('sections.services')
 
   @include('sections.gallery')
 
@@ -21,8 +22,6 @@
   @include('sections.faq')
 
   @include('sections.subscribe')
-
-  @include('sections.buy_ticket')
 
   @include('sections.contact')
 </main>

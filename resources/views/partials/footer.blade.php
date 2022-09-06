@@ -4,7 +4,7 @@
       <div class="row">
 
         <div class="col-lg-3 col-md-6 footer-info">
-          <img src="img/logo.png" alt="TheEvenet">
+          <img src="img/logo.png" alt="SKY-B">
           <p>{{ $settings['footer_description'] ?? '' }}</p>
         </div>
 
@@ -66,10 +66,10 @@
 
   <div class="container">
     <div class="copyright">
-      &copy; Copyright <strong>{{ env('APP_NAME', 'TheEvent') }}</strong>. All Rights Reserved
+      &copy; Copyright <strong>{{ env('APP_NAME', 'SKY-B') }}</strong>. All Rights Reserved
     </div>
     <div class="credits">
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      Designed by <a href="#">Sifat And Ria</a>
     </div>
   </div>
 </footer><!-- #footer -->

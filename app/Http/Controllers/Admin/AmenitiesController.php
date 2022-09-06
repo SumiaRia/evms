@@ -53,7 +53,7 @@ class AmenitiesController extends Controller
     public function show(Amenity $amenity)
     {
         abort_if(Gate::denies('amenity_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
+        echo $amenity;
         return view('admin.amenities.show', compact('amenity'));
     }
 

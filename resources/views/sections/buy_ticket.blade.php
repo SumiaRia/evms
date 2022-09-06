@@ -42,7 +42,9 @@
           </button>
         </div>
         <div class="modal-body">
-          <form method="POST" action="#">
+          <form  action="#" method="POST">
+          @csrf
+            <h1>hello</h1>
             <div class="form-group">
               <input type="text" class="form-control" name="your-name" placeholder="Your Name">
             </div>

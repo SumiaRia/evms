@@ -17,7 +17,7 @@
                             <i class="fas fa-fw fa-tachometer-alt">
 
                             </i>
-                            <span>{{ trans('global.dashboard') }}</span>
+                            <span>{{ ('global.dashboard') }}</span>
                         </p>
                     </a>
                 </li>
@@ -96,7 +96,7 @@
                         </a>
                     </li>
                 @endcan
-                @can('schedule_access')
+                  @can('schedule_access')
                     <li class="nav-item">
                         <a href="{{ route("admin.schedules.index") }}" class="nav-link {{ request()->is('admin/schedules') || request()->is('admin/schedules/*') ? 'active' : '' }}">
                             <i class="fa-fw far fa-clock">
@@ -120,7 +120,7 @@
                         </a>
                     </li>
                 @endcan
-                @can('hotel_access')
+              @can('hotel_access')
                     <li class="nav-item">
                         <a href="{{ route("admin.hotels.index") }}" class="nav-link {{ request()->is('admin/hotels') || request()->is('admin/hotels/*') ? 'active' : '' }}">
                             <i class="fa-fw fas fa-hotel">
@@ -128,6 +128,18 @@
                             </i>
                             <p>
                                 <span>{{ trans('cruds.hotel.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
+                @endcan 
+                @can('service_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.services.index") }}" class="nav-link {{ request()->is('admin/services') || request()->is('admin/services/*') ? 'active' : '' }}">
+                            <i class="fa-fw fas fa-hotel">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('cruds.service.title') }}</span>
                             </p>
                         </a>
                     </li>
@@ -156,7 +168,7 @@
                         </a>
                     </li>
                 @endcan
-                @can('faq_access')
+               @can('faq_access')
                     <li class="nav-item">
                         <a href="{{ route("admin.faqs.index") }}" class="nav-link {{ request()->is('admin/faqs') || request()->is('admin/faqs/*') ? 'active' : '' }}">
                             <i class="fa-fw fas fa-question">
@@ -167,7 +179,7 @@
                             </p>
                         </a>
                     </li>
-                @endcan
+                @endcan 
                 @can('amenity_access')
                     <li class="nav-item">
                         <a href="{{ route("admin.amenities.index") }}" class="nav-link {{ request()->is('admin/amenities') || request()->is('admin/amenities/*') ? 'active' : '' }}">
@@ -180,18 +192,7 @@
                         </a>
                     </li>
                 @endcan
-                @can('price_access')
-                    <li class="nav-item">
-                        <a href="{{ route("admin.prices.index") }}" class="nav-link {{ request()->is('admin/prices') || request()->is('admin/prices/*') ? 'active' : '' }}">
-                            <i class="fa-fw fas fa-money-bill">
-
-                            </i>
-                            <p>
-                                <span>{{ trans('cruds.price.title') }}</span>
-                            </p>
-                        </a>
-                    </li>
-                @endcan
+               
                 <li class="nav-item">
                     <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                         <p>

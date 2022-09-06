@@ -64,7 +64,7 @@ class PricesController extends Controller
         abort_if(Gate::denies('price_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $price->load('amenities');
-
+        echo $price;
         return view('admin.prices.show', compact('price'));
     }
 

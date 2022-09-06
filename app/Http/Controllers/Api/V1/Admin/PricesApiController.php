@@ -33,7 +33,7 @@ class PricesApiController extends Controller
     public function show(Price $price)
     {
         abort_if(Gate::denies('price_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
+       
         return new PriceResource($price->load(['amenities']));
     }
 

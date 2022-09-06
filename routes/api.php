@@ -27,6 +27,9 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
     // Hotels
     Route::post('hotels/media', 'HotelsApiController@storeMedia')->name('hotels.storeMedia');
     Route::apiResource('hotels', 'HotelsApiController');
+    // Services
+    Route::post('services/media', 'servicesApiController@storeMedia')->name('services.storeMedia');
+    Route::apiResource('services', 'servicesApiController');
 
     // Galleries
     Route::post('galleries/media', 'GalleriesApiController@storeMedia')->name('galleries.storeMedia');
@@ -44,4 +47,9 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
 
     // Prices
     Route::apiResource('prices', 'PricesApiController');
+    // Amenities2
+    Route::apiResource('amenities2', 'Amenities2ApiController');
+
+    // Prices2
+    Route::apiResource('prices2', 'Prices2ApiController');
 });
