@@ -120,18 +120,30 @@
                         </a>
                     </li>
                 @endcan
-              @can('hotel_access')
+              @can('price_access')
                     <li class="nav-item">
-                        <a href="{{ route("admin.hotels.index") }}" class="nav-link {{ request()->is('admin/hotels') || request()->is('admin/hotels/*') ? 'active' : '' }}">
+                        <a href="{{ route("admin.prices.index") }}" class="nav-link {{ request()->is('admin/prices') || request()->is('admin/prices/*') ? 'active' : '' }}">
                             <i class="fa-fw fas fa-hotel">
 
                             </i>
                             <p>
-                                <span>{{ trans('cruds.hotel.title') }}</span>
+                                <span>{{ trans('cruds.price.title') }}</span>
                             </p>
                         </a>
                     </li>
                 @endcan 
+                @can('price2_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.prices2.index") }}" class="nav-link {{ request()->is('admin/prices2') || request()->is('admin/prices2/*') ? 'active' : '' }}">
+                            <i class="fa-fw fas fa-hotel">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('cruds.price2.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
+                @endcan
                 @can('service_access')
                     <li class="nav-item">
                         <a href="{{ route("admin.services.index") }}" class="nav-link {{ request()->is('admin/services') || request()->is('admin/services/*') ? 'active' : '' }}">
@@ -192,7 +204,18 @@
                         </a>
                     </li>
                 @endcan
-               
+                @can('amenity2_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.amenities2.index") }}" class="nav-link {{ request()->is('admin/amenities2') || request()->is('admin/amenities2/*') ? 'active' : '' }}">
+                            <i class="fa-fw fas fa-check">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('cruds.amenity2.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
+                @endcan
                 <li class="nav-item">
                     <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                         <p>

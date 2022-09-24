@@ -12,7 +12,6 @@
 
   @include('sections.venues')
 
-  @include('sections.hotels')
   @include('sections.services')
 
   @include('sections.gallery')

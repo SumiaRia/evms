@@ -16,15 +16,15 @@ class Prices2Seeder extends Seeder
         $prices2 = [
             [
                 'name'  => 'Standard Access',
-                'price2' => 150
+                'price' => 150
             ],
             [
                 'name'  => 'Pro Access',
-                'price2' => 250
+                'price' => 250
             ],
             [
                 'name'  => 'Premium Access',
-                'price2' => 350
+                'price' => 350
             ],
         ];
 

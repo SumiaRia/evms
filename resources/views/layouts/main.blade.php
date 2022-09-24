@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>{{ env('APP_NAME', 'SKY-B') }}</title>
+  <title>{{ env('APP_NAME', 'Event_Mate') }}</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <!-- Google Fonts -->

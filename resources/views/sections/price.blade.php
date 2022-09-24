@@ -5,8 +5,8 @@
   <div class="container">
 
     <div class="section-header">
-      <h2>Buy Tickets</h2>
-      <p>Velit consequatur consequatur inventore iste fugit unde omnis eum aut.</p>
+      <h2>Buy Package</h2>
+      <!-- <p>Velit consequatur consequatur inventore iste fugit unde omnis eum aut.</p> -->
     </div>
 
     <div class="row">
@@ -39,7 +39,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Buy Tickets</h4>
+          <h4 class="modal-title">Buy Package</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>

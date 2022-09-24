@@ -9,7 +9,6 @@ use App\Http\Requests\StorePrice2Request;
 use App\Http\Requests\UpdatePrice2Request;
 use App\Price2;
 use App\Price;
-use App\Amenity;
 use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,17 +19,17 @@ class Prices2Controller extends Controller
     {
         abort_if(Gate::denies('price2_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $prices2 = Price2::all();
-        echo $prices2;
+        $prices = Price2::all();
 
-        return view('admin.prices2.index', compact('prices2'));
+        return view('admin.prices2.index', compact('prices'));
     }
 
     public function create()
     {
         abort_if(Gate::denies('price2_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $amenities2 = Amenity2::all()->pluck('name', 'id');
+        $amenities2 = Amenity2::all()->value('name', 'id');
+
         return view('admin.prices2.create', compact('amenities2'));
     }
 
@@ -42,16 +41,14 @@ class Prices2Controller extends Controller
         return redirect()->route('admin.prices2.index');
     }
 
-    public function edit(Price2 $price2)
+    public function edit(Price2 $price)
     {
         abort_if(Gate::denies('price2_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $amenities2 = Amenity2::all()->pluck('name', 'id');
-        echo $amenities2;
-
-        $price2->load('amenities2');
-        $id=$price2->id;
-        return view('admin.prices2.edit', compact('amenities2', 'price2','id'));
+        $price->load('amenities2');
+        echo $price;
+        return view('admin.prices2.edit', compact('amenities2', 'price'));
     }
 
     public function update(UpdatePrice2Request $request, Price2 $price2)
@@ -62,14 +59,15 @@ class Prices2Controller extends Controller
         return redirect()->route('admin.prices2.index');
     }
 
-    public function show(Price $price)
+    public function show(Price2 $price2)
     {
         abort_if(Gate::denies('price2_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $price->load('amenities');
-        echo $price;
-        return view('admin.prices.show', compact('price','id'));
+        $price2->load('amenities2');
+        echo $price2;
+        return view('admin.prices2.show', compact('price2'));
     }
+
     public function destroy(Price2 $price2)
     {
         abort_if(Gate::denies('price2_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');

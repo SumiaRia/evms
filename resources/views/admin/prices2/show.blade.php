@@ -20,7 +20,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.price2.fields.name') }}jjj
+                            {{ trans('cruds.price2.fields.name') }}
                         </th>
                         <td>
                             {{ $price2->name }}
@@ -28,7 +28,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.price2.fields.price2') }}
+                            {{ trans('cruds.price2.fields.price') }}
                         </th>
                         <td>
                             ${{ $price2->price2 }}

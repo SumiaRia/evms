@@ -184,6 +184,7 @@ return [
     'photo3'                               => 'Photo3',
     'prefix'                               => 'Prefix',
     'price'                                => 'Price',
+    'price2'                                => 'Price2',
     'product_management'                   => 'Product management',
     'product_name'                         => 'Product name',
     'products'                             => 'Products',

@@ -20,7 +20,7 @@ class Prices2ApiController extends Controller
         return new Price2Resource(Price2::with(['amenities2'])->get());
     }
 
-    public function store(StorePriceRequest $request)
+    public function store(StorePrice2Request $request)
     {
         $price2 = Price2::create($request->all());
         $price2->amenities2()->sync($request->input('amenities2', []));
@@ -32,12 +32,11 @@ class Prices2ApiController extends Controller
 
     public function show(Price2 $price2)
     {
-        abort_if(Gate::denies('price2_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        //echo $price2;
+        abort_if(Gate::denies('price2_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');       
         return new Price2Resource($price2->load(['amenities2']));
     }
 
-    public function update(UpdatePriceRequest $request, Price2 $price2)
+    public function update(UpdatePrice2Request $request, Price2 $price2)
     {
         $price2->update($request->all());
         $price2->amenities2()->sync($request->input('amenities2', []));
@@ -49,7 +48,7 @@ class Prices2ApiController extends Controller
 
     public function destroy(Price2 $price2)
     {
-        abort_if(Gate::denies('price2_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        abort_if(Gate::denies('price_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $price2->delete();
 

@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'site_title' => 'SKY-B',
+    'site_title' => 'Event_Mate',
 ];

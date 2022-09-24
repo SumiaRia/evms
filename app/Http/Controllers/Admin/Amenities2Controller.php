@@ -66,7 +66,7 @@ class Amenities2Controller extends Controller
         return back();
     }
 
-    public function massDestroy(MassDestroyAmenityRequest $request)
+    public function massDestroy(MassDestroyAmenity2Request $request)
     {
         Amenity2::whereIn('id', request('ids'))->delete();
 

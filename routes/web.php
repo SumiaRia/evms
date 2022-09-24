@@ -4,10 +4,8 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('speaker/{speaker}', 'HomeController@view')->name('speaker');
 Route::get('/price1', 'HomeController@price')->name('price');
 Route::get('/price2', 'HomeController@price2')->name('price2');
+Route::get('/payment', 'HomeController@payment')->name('payment');
 
-/*Route::get('/welcome', function () {
-    return view('welcome');
-});*/
 
 Route::redirect('/home', '/admin');
 Auth::routes(['register' => false]);

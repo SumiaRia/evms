@@ -33,10 +33,12 @@ class HomeController extends Controller
         $faqs = Faq::all();
         $prices = Price::with('amenities')->get();
         $amenities = Amenity::with('prices')->get();
+        $prices2 = Price2::with('amenities2')->get();
+        $amenities2 = Amenity2::with('prices2')->get();
         $services=Service::all();
         $idents=1;
 
-        return view('home', compact('settings', 'speakers', 'schedules', 'venues', 'hotels', 'galleries', 'sponsors', 'faqs', 'prices', 'amenities','services','idents'));
+        return view('home', compact('settings', 'speakers', 'schedules', 'venues', 'hotels', 'galleries', 'sponsors', 'faqs', 'prices', 'amenities', 'prices2', 'amenities2','services','idents'));
     }
 
     public function view(Speaker $speaker)
@@ -44,6 +46,11 @@ class HomeController extends Controller
         $settings = Setting::pluck('value', 'key');
         
         return view('speaker', compact('settings', 'speaker'));
+    }
+    public function payment()
+    {
+        
+        return view('payment');
     }
     public function price()
     {

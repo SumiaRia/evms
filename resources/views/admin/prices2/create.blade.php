@@ -21,12 +21,12 @@
                     {{ trans('cruds.price2.fields.name_helper') }}
                 </p>
             </div>
-            <div class="form-group {{ $errors->has('price2') ? 'has-error' : '' }}">
-                <label for="price2">{{ trans('cruds.price2.fields.price2') }}*</label>
-                <input type="number" id="price2" name="price2" class="form-control" value="{{ old('price2', isset($price2) ? $price2->price2 : '') }}" step="0.01" required>
-                @if($errors->has('price2'))
+            <div class="form-group {{ $errors->has('price') ? 'has-error' : '' }}">
+                <label for="price">{{ trans('cruds.price2.fields.price') }}*</label>
+                <input type="number" id="price" name="price" class="form-control" value="{{ old('price', isset($price2) ? $price2->price : '') }}" step="0.01" required>
+                @if($errors->has('price'))
                     <p class="help-block">
-                        {{ $errors->first('price2') }}
+                        {{ $errors->first('price') }}
                     </p>
                 @endif
                 <p class="helper-block">

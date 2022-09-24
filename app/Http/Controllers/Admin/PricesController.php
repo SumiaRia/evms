@@ -45,9 +45,7 @@ class PricesController extends Controller
         abort_if(Gate::denies('price_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $amenities = Amenity::all()->pluck('name', 'id');
-
         $price->load('amenities');
-
         return view('admin.prices.edit', compact('amenities', 'price'));
     }
 

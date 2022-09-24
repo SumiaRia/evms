@@ -25,10 +25,10 @@ class UpdatePrice2Request extends FormRequest
             'price'       => [
                 'required',
             ],
-            'amenities.*' => [
+            'amenities2.*' => [
                 'integer',
             ],
-            'amenities'   => [
+            'amenities2'   => [
                 'array',
             ],
         ];

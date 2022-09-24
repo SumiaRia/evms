@@ -11,14 +11,14 @@
             @csrf
             <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
                 <label for="name">{{ trans('cruds.amenity2.fields.name') }}*</label>
-                <input type="text" id="name" name="name" class="form-control" value="{{ old('name', isset($amenity) ? $amenity->name : '') }}" required>
+                <input type="text" id="name" name="name" class="form-control" value="{{ old('name', isset($amenity2) ? $amenity2->name : '') }}" required>
                 @if($errors->has('name'))
                     <p class="help-block">
                         {{ $errors->first('name') }}
                     </p>
                 @endif
                 <p class="helper-block">
-                    {{ trans('cruds.amenity.fields.name_helper') }}
+                    {{ trans('cruds.amenity2.fields.name_helper') }}
                 </p>
             </div>
             <div>

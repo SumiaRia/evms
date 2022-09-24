@@ -22,7 +22,7 @@ class StorePrice2Request extends FormRequest
             'name'        => [
                 'required',
             ],
-            'price2'       => [
+            'price'       => [
                 'required',
             ],
             'amenities2.*' => [

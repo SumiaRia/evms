@@ -21,7 +21,7 @@
         <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#gallery">Gallery</a></li>
         <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#supporters">Our Clients</a></li>
         <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#contact">Contact</a></li>
-        <li class="buy-tickets"><a href="{{ Route::current()->getName() != 'login' ? route('login') : '' }}">Login</a></li> 
+        <li class="buy-tickets"><a href="http://127.0.0.1:8000/payment">Get Your tickets</a></li> 
       </ul>
     </nav>
   </div>

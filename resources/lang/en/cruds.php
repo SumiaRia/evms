@@ -325,7 +325,7 @@ return [
             'id_helper'         => '',
             'name'              => 'Name',
             'name_helper'       => '',
-            'price2'             => 'Price2',
+            'price'             => 'Price',
             'price2_helper'      => '',
             'amenities2'         => 'Amenities2',
             'amenities2_helper'  => '',

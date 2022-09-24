@@ -19,7 +19,7 @@ class Price2 extends Model
 
     protected $fillable = [
         'name',
-        'price2',
+        'price',
         'created_at',
         'updated_at',
         'deleted_at',
